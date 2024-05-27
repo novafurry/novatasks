@@ -6,6 +6,8 @@
     <title>New task</title>
     <link rel="stylesheet" href="https://unpkg.com/reset-css/reset.css">
     <link rel="stylesheet" href="styles.css">
+    <script type="module" src="https://cdn.jsdelivr.net/npm/emoji-picker-element@^1/index.js"></script>
+    <link rel="icon" id="favicon" href="data:image/svg+xml,<svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 100 100&quot;><text y=&quot;.9em&quot; font-size=&quot;90&quot;>🤑</text></svg>">
 </head>
 <body>
     <div class="controls">
@@ -16,6 +18,7 @@
         <button id="timerButton" onclick="toggleTimer()" title="Start timer">
             <span class="visually-hidden">Start timer</span>
         </button>
+        <emoji-picker></emoji-picker>
         <input type="text" id="title" placeholder="New task" onkeydown="handleEnter(event)" oninput="updateTitle()">
     </div>
     <textarea id="content" placeholder="Task description"></textarea>
