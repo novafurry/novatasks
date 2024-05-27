@@ -92,7 +92,9 @@
 
     function createNewTask() {
         const taskId = Date.now() + Math.random().toString(36).substr(2, 9);
-        window.open(window.location.href + '?taskId=' + taskId, '_blank');
+        const newUrl = new URL(window.location.origin + window.location.pathname);
+        newUrl.searchParams.set('taskId', taskId);
+        window.open(newUrl.toString(), '_blank');
     }
 
     function saveTaskState() {
