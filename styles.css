@@ -1,6 +1,30 @@
 * {
     box-sizing: border-box;
 }
+#emojicheck{
+}
+#emojicheck::after{
+    display: inline;
+    content: attr(data-emoji);
+    position:relative;
+    left:-3px;
+    top:-3px;
+    font-size: 16px;
+    filter: grayscale();
+    opacity: 1;
+}
+#emojicheck:checked:after{
+    filter: grayscale(0);
+}
+#emojicheck ~ emoji-picker{
+    display: none;
+}
+#emojicheck:checked ~ emoji-picker{
+    display: inline;
+    position: absolute;
+    top:60px;
+    z-index: 99999;
+}
 body {
     font-family: Arial, sans-serif;
     padding: 20px;

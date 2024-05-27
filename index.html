@@ -18,15 +18,16 @@
         <button id="timerButton" onclick="toggleTimer()" title="Start timer">
             <span class="visually-hidden">Start timer</span>
         </button>
+        <input type="checkbox" data-emoji="🚽" name="" id="emojicheck">
         <emoji-picker></emoji-picker>
         <input type="text" id="title" placeholder="New task" onkeydown="handleEnter(event)" oninput="updateTitle()">
     </div>
     <textarea id="content" placeholder="Task description"></textarea>
     <p id="timer">0:00</p>
-    <table class="instructions">
+    <!-- <table class="instructions">
         <tr><td>Press "<kbd>Ctrl / Cmd</kbd> + <kbd>Enter</kbd>"</td><td>to start / stop</td></tr>
         <tr><td>Press "<kbd>Ctrl</kbd> + <kbd>N</kbd>"</td><td>to create a new task</td></tr>
-    </table>
+    </table> -->
 
     <script src="scripts.js"></script>
 </body>
