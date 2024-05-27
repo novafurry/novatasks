@@ -81,6 +81,13 @@
         iconLink.href = 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y=".9em" font-size="90">☑️</text></svg>';
         document.getElementsByTagName('head')[0].appendChild(iconLink);
     }
+    function emojiCon(emoji) {
+        const iconLink = document.getElementById('favicon') || document.createElement('link');
+        iconLink.rel = 'icon';
+        iconLink.id = 'favicon';
+        iconLink.href = `data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y=".9em" font-size="90">${emoji}</text></svg>`;
+        document.getElementsByTagName('head')[0].appendChild(iconLink);
+    }
 
     function createPlayFavicon() {
         const iconLink = document.getElementById('favicon') || document.createElement('link');
